@@ -130,7 +130,7 @@ public final class ItemUtils {
      */
     public static boolean hasItemIncludingOffHand(Player player, Material material) {
         // Checks main inventory / item bar
-        boolean containsInMain = player.getInventory().contains(material);
+        boolean containsInMain = player.getInventory().contains(new ItemStack(material, 1));
 
         if (containsInMain) {
             return true;
